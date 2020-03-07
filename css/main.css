@@ -4,29 +4,72 @@
     box-sizing: border-box;
 } */
 
+.percent-progress { background: yellow; };
+.active-tasks { background: indigo; }
+.suspended-tasks { background: thistle; }
+.completed { background: indianred; }
+.footer { background: red; }
+
 body {
     display: grid;
     grid-template-columns: 33.33333% 33.33333% 33.33333%;
     grid-template-rows: 20% 25% 10% 40% 5%;
-    grid-template-areas: 
+}
+    /*grid-template-areas: 
         "my-heading my-heading my-heading"
         "my-form my-form my-form"
         "percent-progress percent-progress percent-progress"
         "active-tasks suspended-tasks completed"
-        "footer footer footer";
+        "footer footer footer"; */
+    
+.my-heading {
+    grid-column-start: span 3;
+    grid-row-start: 1;        
 }
 
-.my-heading { grid-area: my-heading; }
+.my-form {
+    grid-column-start: span 3;
+    grid-row-start: 2;         
+}
+
+.percent-progress {
+    grid-column-start: span 3;
+    grid-row-start: 3;         
+}
+
+.active-tasks {
+    grid-column-start: 1; 
+    grid-row-start: 4;      
+}
+
+.suspended-tasks {
+    grid-column-start: 2;  
+    grid-row-start: 4;     
+}
+    
+.completed {
+    grid-column-start: 3;
+    grid-row-start: 4;      
+}
+   
+footer {
+    grid-column-start: span 3; 
+    grid-row-start: 5;     
+}
+
+/* .my-heading { grid-area: my-heading; }
 .my-form { grid-area: my-form; }
 .percent-progress { grid-area: percent-progress; };
 .active-tasks { grid-area: active-tasks; }
 .suspended-tasks { grid-area: suspended-tasks; }
 .completed { grid-area: completed; }
-.footer { grid-area: footer; }
+.footer { grid-area: footer; } */
+
 
 .my-heading {
     background-color: blueviolet;
     text-align: center;
+    margin: 0;
 }
 
 .my-form {
@@ -61,16 +104,18 @@ body {
     color: white;
   }
   
-  .my-form button:hover {
-    background-color: lightgreen;
+.my-form button:hover {
+   background-color: lightgreen;
   }
 
-  .percent-progress {
-    background-color: lightgreen;
-    text-align: center;
+.percent-progress {
+    align-content: center;
     display: flex;
-    align-items: center;
-    flex-flow: column;
-    margin: 50px;
-  }
-  
+    grid-column-start: span 3;
+}
+
+.percent-progress {
+    background-color: blueviolet;
+    text-align: center;
+    margin: 100px;
+}
