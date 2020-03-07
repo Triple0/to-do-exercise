@@ -1,0 +1,76 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    display: grid;
+    grid-template-columns: 33.33333% 33.33333% 33.33333%;
+    grid-template-rows: 20% 25% 10% 40% 5%;
+    grid-template-areas: 
+        "my-heading my-heading my-heading"
+        "my-form my-form my-form"
+        "percent-progress percent-progress percent-progress"
+        "active-tasks suspended-tasks completed"
+        "footer footer footer";
+}
+
+.my-heading { grid-area: my-heading; }
+.my-form { grid-area: my-form; }
+.percent-progress { grid-area: percent-progress; };
+.active-tasks { grid-area: active-tasks; }
+.suspended-tasks { grid-area: suspended-tasks; }
+.completed { grid-area: completed; }
+.footer { grid-area: footer; }
+
+.my-heading {
+    background-color: blueviolet;
+    text-align: center;
+}
+
+.my-form {
+    background-color: red;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+
+/* Add some margins for each label */
+.my-form label {
+    margin: 20px 10px 20px 0;
+    font-size: larger;
+  }
+  
+  /* Style the input fields */
+  .my-form input {
+    vertical-align: middle;
+    margin: 0 10px 20px 0;
+    padding: 5px;
+    width: 75vw;
+    background-color: #fff;
+    border: 2px solid #ddd;
+  }
+  
+  /* Style the submit button */
+  .my-form button {
+    padding: 10px 30px;
+    background-color: dodgerblue;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .my-form button:hover {
+    background-color: lightgreen;
+  }
+
+  .percent-progress {
+    background-color: lightgreen;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    margin: 50px;
+  }
+  
