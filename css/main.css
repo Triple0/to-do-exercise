@@ -1,27 +1,22 @@
-/* * {
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-} */
+}
 
-.percent-progress { background: yellow; };
-.active-tasks { background: indigo; }
-.suspended-tasks { background: thistle; }
-.completed { background: indianred; }
-.footer { background: red; }
+#progress { background: yellow; }
+#new-tasks { background: indigo; }
+#halted-tasks { background: thistle; }
+#finished-tasks { background: indianred; }
+#footer { background: red; }
+
 
 body {
     display: grid;
     grid-template-columns: 33.33333% 33.33333% 33.33333%;
-    grid-template-rows: 20% 25% 10% 40% 5%;
+    grid-template-rows: auto auto auto auto auto;
 }
-    /*grid-template-areas: 
-        "my-heading my-heading my-heading"
-        "my-form my-form my-form"
-        "percent-progress percent-progress percent-progress"
-        "active-tasks suspended-tasks completed"
-        "footer footer footer"; */
-    
+
 .my-heading {
     grid-column-start: span 3;
     grid-row-start: 1;        
@@ -32,22 +27,22 @@ body {
     grid-row-start: 2;         
 }
 
-.percent-progress {
+#progress {
     grid-column-start: span 3;
     grid-row-start: 3;         
 }
 
-.active-tasks {
+#new-tasks {
     grid-column-start: 1; 
     grid-row-start: 4;      
 }
 
-.suspended-tasks {
+#halted-tasks {
     grid-column-start: 2;  
     grid-row-start: 4;     
 }
     
-.completed {
+#finished-tasks {
     grid-column-start: 3;
     grid-row-start: 4;      
 }
@@ -56,15 +51,6 @@ footer {
     grid-column-start: span 3; 
     grid-row-start: 5;     
 }
-
-/* .my-heading { grid-area: my-heading; }
-.my-form { grid-area: my-form; }
-.percent-progress { grid-area: percent-progress; };
-.active-tasks { grid-area: active-tasks; }
-.suspended-tasks { grid-area: suspended-tasks; }
-.completed { grid-area: completed; }
-.footer { grid-area: footer; } */
-
 
 .my-heading {
     background-color: blueviolet;
@@ -77,6 +63,7 @@ footer {
     display: flex;
     align-items: center;
     flex-flow: column;
+    padding-bottom: 20px;
 }
 
 /* Add some margins for each label */
@@ -96,26 +83,21 @@ footer {
   }
   
   /* Style the submit button */
-  .my-form button {
+  #button {
     padding: 10px 30px;
+    width: 25vw;
     background-color: dodgerblue;
     border: 2px solid #ddd;
     border-radius: 5px;
     color: white;
   }
   
-.my-form button:hover {
+#button:hover {
    background-color: lightgreen;
   }
 
-.percent-progress {
-    align-content: center;
-    display: flex;
-    grid-column-start: span 3;
-}
-
-.percent-progress {
+#progress {
     background-color: blueviolet;
     text-align: center;
-    margin: 100px;
+    margin: 50px;
 }

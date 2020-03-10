@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/main.css">
 
     <!-- Scripts: -->
-    <script type="text/javascript" src="./js/scripts.js" defer></script>
+    <script type="text/javascript" src="./js/task.js" defer></script>
 </head>
 
 <body>
@@ -22,25 +22,31 @@
             Enter Task:
         </label>
         <input type="text" id="to-do">
-        <button name="add-to-do" onclick="addTask()">Add To-Do</button>
+        <input type="submit" id = "button" value="Add To-Do">
     </form>
-    <section name="task-progress">
+    
+    <section id="progress">
         <h2>Task Progress</h2>
         
-    </section>
-    <section name="active-tasks">
-        <h2>Active Tasks: </h2>
+        
         
     </section>
-    <section name="suspended-tasks">
+    <section id="new-tasks">
+        <h2>Active Tasks: </h2>
+        <ul id="new_task"></ul>
+         
+        
+        
+    </section>
+    <section id="halted-tasks">
         <h2>Suspended Tasks: </h2>
         
     </section>
-    <section name="completed-tasks">
+    <section id="finished-tasks">
         <h2>Completed Tasks: </h2>
      
     </section>
-    <footer name="footer">&copy; Olalekan Olapeju</footer>
+    <footer>&copy; Olalekan Olapeju</footer>
 </body>
 
 </html>
